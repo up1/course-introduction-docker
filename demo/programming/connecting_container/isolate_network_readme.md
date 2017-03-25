@@ -25,7 +25,6 @@ mysql:latest
 $docker container run -d --name myphp \
 --network back_network \
 -v $(pwd)/web:/web \
--p 9000:9000 \
 --link mydb:mydb \
 somkiat/customphp
 
