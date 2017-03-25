@@ -44,3 +44,9 @@ Step all containers
 ```
 $docker-compose kill
 ```
+
+Custom docker-compose file
+```
+$docker-compose -f docker-compose2.yml up --force-recreate
+
+```
