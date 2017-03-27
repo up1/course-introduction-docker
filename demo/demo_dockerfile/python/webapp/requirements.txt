@@ -1,0 +1,6 @@
+Flask
+Jinja2
+Werkzeug
+distribute
+robotframework
+robotframework-selenium2library
