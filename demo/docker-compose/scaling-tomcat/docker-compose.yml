@@ -1,0 +1,14 @@
+version: '2'
+services:
+  web:
+    image: tomcat:alpine
+    volumes:
+      - ./index.jsp:/usr/local/tomcat/webapps/ROOT/index.jsp:ro
+  lb:
+    image: dockercloud/haproxy
+    links:
+      - web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 80:80
