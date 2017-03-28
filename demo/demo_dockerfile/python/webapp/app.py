@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     provider = str(os.environ.get('PROVIDER', 'world'))
-    return '3Hello '+provider+'!'
+    return 'EDIT 2'+provider+'!'
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
