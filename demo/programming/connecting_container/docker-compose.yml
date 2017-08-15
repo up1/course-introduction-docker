@@ -10,6 +10,7 @@ services:
           - ./site.conf:/etc/nginx/conf.d/default.conf
       volumes_from:
           - myphp
+          
   myphp:
       container_name: myphp
       build: ./php/
