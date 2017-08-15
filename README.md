@@ -22,3 +22,6 @@
 * Manage Data persistence with Volumes
 * How to use Docker with Continuous Integration and Delivery process ?
 * Docker compose
+
+## Resources
+* [Reference resources](https://github.com/up1/course-introduction-docker/wiki)
