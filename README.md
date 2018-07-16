@@ -22,6 +22,10 @@
 * Manage Data persistence with Volumes
 * How to use Docker with Continuous Integration and Delivery process ?
 * Docker compose
+* Introduction to Docker Swarm
+
+## Workshops and Examples
+* [Java and MySQL](https://github.com/up1/docker-workshop-java-mysql)
 
 ## Resources
 * [Reference resources](https://github.com/up1/course-introduction-docker/wiki)
