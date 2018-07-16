@@ -26,6 +26,7 @@
 
 ## Workshops and Examples
 * [Java and MySQL](https://github.com/up1/docker-workshop-java-mysql)
+* [.Net core 2.0 and MySQL](https://github.com/up1/docker-workshop-dotnet-core-mysql)
 
 ## Resources
 * [Reference resources](https://github.com/up1/course-introduction-docker/wiki)
