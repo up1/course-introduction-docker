@@ -19,3 +19,19 @@ docker container inspect <container id/name>
 docker container exec -it <container id/name>  <shell>
 docker container diff <container id/name>
 docker container commit <container id/name>  <image name>:<tag>
+
+# Work with JDK
+docker container run --rm \
+-v $(pwd):/xx  openjdk:8u171-jdk-alpine3.8 javac /xx/Hello.java
+
+docker container run --rm \
+-v $(pwd):/xx -w /xx   openjdk:8u171-jdk-alpine3.8 java Hello
+
+# Work with Nginx
+docker container run -d \
+-v $(pwd):/usr/share/nginx/html -p 8080:80 \
+  nginx:1.14-alpine
+
+docker container run -d \
+-v $(pwd)/index.html:/usr/share/nginx/html/index.html -p 8080:80 \
+ nginx:1.14-alpine
