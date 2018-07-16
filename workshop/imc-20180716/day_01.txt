@@ -1,0 +1,21 @@
+https://github.com/up1/course-introduction-docker
+
+# Image commands
+docker image pull <image name>:<tag>
+docker images
+docker image ls
+docker image prune
+docker image inspect <image name>
+
+# Container commands
+docker container run <image name>:<tag>
+docker container run -d <image name>:<tag>
+docker container run -p <host port>:<container port> <image name>:<tag>
+docker container ps
+docker container ps -a
+docker container ps -q
+docker container ps -a -q
+docker container inspect <container id/name>
+docker container exec -it <container id/name>  <shell>
+docker container diff <container id/name>
+docker container commit <container id/name>  <image name>:<tag>
