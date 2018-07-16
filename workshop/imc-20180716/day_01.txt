@@ -46,3 +46,19 @@ docker container run -d -P tomcat2:0.1
 docker login
 docker image tag nginx2:0.1 somkiat/nginx2:0.1
 docker image push somkiat/nginx2:0.1
+
+# More topics
+1. Sematic versioning
+https://semver.org/
+2. The Twelve-Factor App
+https://12factor.net/
+3. https://kitematic.com/
+4. Dockerfile best practices
+https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+
+# Windows Issues
+1. Client.Timeout exceeded while awaiting headers
+https://github.com/docker/for-win/issues/1534
+
+2. Create .dockerignore
+https://stackoverflow.com/questions/5004633/how-to-manually-create-a-file-with-a-dot-prefix-in-windows-for-example-htacce
