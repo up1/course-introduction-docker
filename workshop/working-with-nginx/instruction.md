@@ -84,3 +84,8 @@ root@demo01:/# echo "From Container" > /usr/share/nginx/html/index.html
 root@demo01:/# cat /usr/share/nginx/html/index.html
 ```
 
+Delete container
+```
+$docker container stop demo01
+$docker container rm demo01
+```
