@@ -23,6 +23,7 @@
 * How to use Docker with Continuous Integration and Delivery process ?
 * Docker compose
 * Introduction to Docker Swarm
+* Monitoring 
 
 ## Workshops and Examples
 * [Java and MySQL](https://github.com/up1/docker-workshop-java-mysql)
