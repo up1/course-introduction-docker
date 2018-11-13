@@ -3,13 +3,11 @@
 ## Day 1
 * What is Container ?
 * Why container is matter ?
-* Installation
-  * Windows
-  * Linux
-  * MacOS
 * Docker component and ecosystem
 * Docker Image
 * Docker Container
+* Docker Registry
+* Tools
 
 ## Day 2
 * Store and Get Docker images from Docker Hub
