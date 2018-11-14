@@ -68,3 +68,18 @@ $docker run \
 5. Show the list of metrics
 
 ## 3. Monitoring docker with cAdvisor
+1. Create cAdvisor container
+```
+$docker run \
+  -d \
+  --name=cadvisor \
+  -p 8080:8080 \
+  --volume=/var/run:/var/run:rw \
+  --volume=/sys:/sys:ro \
+  --volume=/var/lib/docker/:/var/lib/docker:ro \
+  google/cadvisor:latest
+```
+
+2. Show the dashboard at 
+* http://localhost:8080
+* http://localhost:8080/docker
