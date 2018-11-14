@@ -1,0 +1,16 @@
+version: '3.2'
+services:
+  backend1:
+      build: ./code
+  backend2:
+      build: ./code
+  backend3:
+      build: ./code
+  loadbalancer:
+      build: ./load-balancer
+      links:
+          - backend1
+          - backend2
+          - backend3
+      ports:
+          - '80:80'
