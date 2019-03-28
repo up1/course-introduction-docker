@@ -1,5 +1,4 @@
 # Course outline of Introduction to Docker
-
 ## Day 1
 * What is Container ?
 * Why container is matter ?
