@@ -22,3 +22,30 @@ $docker-compose down
 ```
 
 5. Open browser http://localhost/
+
+
+## More :: scaling by service
+Update file nginx.conf
+```
+events { worker_connections 1024; }
+http {
+
+ upstream localhost {
+    server backend:8080;
+ }
+ server {
+    listen 80;
+    server_name localhost;
+    location / {
+       proxy_pass http://localhost;
+       proxy_set_header Host $host;
+    }
+  }
+}
+```
+
+Start with docker-compose
+
+```
+$docker-compose -f docker-compose-scale.yml up --scale backend=5 -d
+```
