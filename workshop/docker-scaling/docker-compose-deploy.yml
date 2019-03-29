@@ -1,20 +1,12 @@
-version: '3.2'
+version: '3.7'
 services:
   backend1:
-      build: ./code
       image: backend1:1.0
   backend2:
-      build: ./code
       image: backend2:1.0
   backend3:
-      build: ./code
       image: backend3:1.0
   loadbalancer:
-      build: ./load-balancer
       image: load-balancer:1.0
-      links:
-          - backend1
-          - backend2
-          - backend3
       ports:
           - '80:80'
