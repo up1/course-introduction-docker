@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  backend:
+      image: backend1:1.0
+      deploy:
+        replicas: 3
+  loadbalancer:
+      image: load-balancer:1.0
+      ports:
+          - '80:80'
+
+#Run services with scaling parameters
+#docker-compose -f docker-compose-scale.yml up --scale backend=5 -d
