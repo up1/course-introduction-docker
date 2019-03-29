@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  web:
+    image: somkiat/web:1.0
+    ports:
+      - 3000:3000
+  db:
+    image: somkiat/db:1.0
+    volumes:
+      - pets-data:/var/lib/postgresql/data
+
+volumes:
+  pets-data:
