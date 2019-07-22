@@ -1,3 +1,5 @@
 *.key
 *.class
 *.pyc
+slide/AIA/
+slide/v2-set/
