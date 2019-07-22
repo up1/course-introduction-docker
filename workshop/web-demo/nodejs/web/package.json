@@ -1,0 +1,14 @@
+{
+  "name": "pets",
+  "version": "1.0.0",
+  "description": "UI for Pets App",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.14.1",
+    "mustache-express": "^1.2.4",
+    "pg": "^7.4.1"
+  }
+}

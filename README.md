@@ -1,15 +1,12 @@
 # Course outline of Introduction to Docker
-
 ## Day 1
 * What is Container ?
 * Why container is matter ?
-* Installation
-  * Windows
-  * Linux
-  * MacOS
 * Docker component and ecosystem
 * Docker Image
 * Docker Container
+* Docker Registry
+* Tools
 
 ## Day 2
 * Store and Get Docker images from Docker Hub
@@ -23,6 +20,7 @@
 * How to use Docker with Continuous Integration and Delivery process ?
 * Docker compose
 * Introduction to Docker Swarm
+* Monitoring 
 
 ## Workshops and Examples
 * [Java and MySQL](https://github.com/up1/docker-workshop-java-mysql)
