@@ -2,26 +2,42 @@
 
 Example web application with go programming
 
-1. Create image from Dockerfile
+## Working with normal solution
+
+1. Create image of Web app with Golang from Dockerfile
 ```
-$docker image build -t mygo:1.0 .
+$cd code
+$docker image build -t web:1.0 .
 ```
 
-2. Create container
+2. Create image of Load Balancer with Nginx from Dockerfile
 ```
-$docker container run -d -p 8080:8080 mygo:1.0
+$cd load-balancer
+$docker image build -t load-balancer:1.0 .
 ```
 
-3. Create file docker-compose.yml
+3. Create container
+```
+// Web container
+$docker container run -d -p 8081:8080 web:1.0
+$docker container run -d -p 8082:8080 web:1.0
+$docker container run -d -p 8083:8080 web:1.0
 
-4. Build and run
+// Load Balancer
+$docker container run -d -p 8000:80 load-balancer:1.0
+```
+
+4. Open browser http://localhost:8000
+
+## Working with Docker compose
+
 ```
 $docker-compose build
 $docker-compose up -d
 $docker-compose down
 ```
 
-5. Open browser http://localhost/
+Open browser http://localhost/
 
 
 ## More :: scaling by service
