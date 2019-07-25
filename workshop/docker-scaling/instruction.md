@@ -19,12 +19,12 @@ $docker image build -t load-balancer:1.0 .
 3. Create container
 ```
 // Web container
-$docker container run -d -p 8081:8080 web:1.0
-$docker container run -d -p 8082:8080 web:1.0
-$docker container run -d -p 8083:8080 web:1.0
+$docker container run -d --name web01 web:1.0
+$docker container run -d --name web02 web:1.0
+$docker container run -d --name web03 web:1.0
 
 // Load Balancer
-$docker container run -d -p 8000:80 load-balancer:1.0
+$docker container run -d -p 8000:80 --link web01 --link web02 --link web03 load-balancer:1.0
 ```
 
 4. Open browser http://localhost:8000
