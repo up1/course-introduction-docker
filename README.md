@@ -28,6 +28,7 @@
 * [Spring Boot](https://github.com/up1/demo-springboot-tn)
 * [ReactJS](https://github.com/up1/demo-docker-reactjs)
 * [Scaling with docker](https://github.com/up1/course-introduction-docker/tree/master/workshop/docker-scaling)
+* [Monitoring](https://github.com/up1/course-introduction-docker/tree/master/workshop/monitoring)
 * [Docker Swarm](https://github.com/up1/course-introduction-docker/tree/master/workshop/swarm)
 * [.Net core 2.0 and MySQL](https://github.com/up1/docker-workshop-dotnet-core-mysql)
 * [.Net core 2.2 and PostgreSQL](https://github.com/up1/workshop-testing)
