@@ -29,6 +29,7 @@
 * [.Net core 2.0 and MySQL](https://github.com/up1/docker-workshop-dotnet-core-mysql)
 * [.Net core 2.2 and PostgreSQL](https://github.com/up1/workshop-testing)
 * [ReactJS](https://github.com/up1/demo-docker-reactjs)
+* [Docker Swarm](https://github.com/up1/course-introduction-docker/tree/master/workshop/swarm)
 
 ## Resources
 * [Reference resources](https://github.com/up1/course-introduction-docker/wiki)
