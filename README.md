@@ -28,6 +28,7 @@
 * [Spring Boot](https://github.com/up1/demo-springboot-tn)
 * [.Net core 2.0 and MySQL](https://github.com/up1/docker-workshop-dotnet-core-mysql)
 * [.Net core 2.2 and PostgreSQL](https://github.com/up1/workshop-testing)
+* [ReactJS](https://github.com/up1/demo-docker-reactjs)
 
 ## Resources
 * [Reference resources](https://github.com/up1/course-introduction-docker/wiki)
