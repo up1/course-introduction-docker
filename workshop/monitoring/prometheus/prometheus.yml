@@ -2,4 +2,4 @@ scrape_configs:
   - job_name: 'docker'
     scrape_interval: 5s
     static_configs:
-      - targets: ['192.168.1.100:1337']
+      - targets: ['10.0.10.123:9323']
