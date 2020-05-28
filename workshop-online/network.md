@@ -92,9 +92,11 @@ docker run -d --net internal --net-alias web --name web3 somkiat/hello
 
 docker container run --rm --net internal alpine nslookup web
 
-# Create reverse proxy (expose port 80:80)
-docker run -d --net internal --net-alias reverse-proxy -p 80:80 --name reverse-proxy-01  somkiat/reverse-proxy
+# Create reverse proxy (expose port 8080:8080)
+docker run -d --net internal -p 8080:8080 --name reverse-proxy-01  somkiat/reverse-proxy
 
-# curl localhost:80
-
+# Testing 
+curl localhost:8080
+curl localhost:8080
+curl localhost:8080
 ```
