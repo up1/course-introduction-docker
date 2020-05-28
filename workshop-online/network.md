@@ -14,15 +14,20 @@ docker container inspect --format '{{ .NetworkSettings.IPAddress }}' webhost
 docker network ls
 docker network inspect bridge
 docker network ls
+
+# Create new Virtual network
 docker network create my_app_net
 docker network ls
 
+# Assign Virtual network to container
 docker network create --help
 docker container run -d --name new_nginx --network my_app_net nginx
 
+# Network information
 docker network inspect my_app_net
 docker network --help
 docker network connect
+
 docker container inspect TAB COMPLETION
 docker container disconnect TAB COMPLETION
 docker container inspect
@@ -32,13 +37,16 @@ docker container inspect
 
 ```
 docker container ls
-docker network inspect TAB COMPLETION
+docker network ls
+docker network inspect <id/name>
+
 docker container run -d --name my_nginx --network my_app_net nginx
-docker container inspect TAB COMPLETION
+docker container inspect my_nginx
+
 docker container exec -it my_nginx ping new_nginx
 docker container exec -it new_nginx ping my_nginx
 docker network ls
-docker container create --help
+
 ```
 
 ## Assignment : Using Containers for CLI Testing

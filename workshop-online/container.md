@@ -50,16 +50,20 @@ docker container top mongo
 ## Assignment : Manage Multiple Containers
 
 ```
+# Databasae server
 docker container run -d -p 3306:3306 --name db -e MYSQL_RANDOM_ROOT_PASSWORD=yes MYSQL_RANDOM_ROOT_PASSWORD
 docker container logs db
-docker container run -d --name webserver -p 8080:80 httpd
-docker ps
 
+# Web server with Apache Web Server
+docker container run -d --name webserver -p 8080:80 httpd
+docker container ps
+
+# Web server with NGINX
 docker container run -d --name proxy -p 80:80 nginx
 docker container ps
 
 docker container ls
-docker container stop TAB COMPLETION
+docker container stop <id/name>
 
 docker container ps -a
 docker container ls -a
@@ -112,32 +116,4 @@ docker image pull alpine
 docker image ls
 docker container run -it alpine bash
 docker container run -it alpine sh
-```
-
-## Docker Networks: Private and Public communication in Containers
-
-```
-docker container run -p 80:80 --name webhost -d nginx
-docker container port webhost
-docker container inspect --format '{{ .NetworkSettings.IPAddress }}' webhost
-```
-
-## Docker Networks: CLI Management of Virtual Networks
-
-```
-docker network ls
-docker network inspect bridge
-docker network ls
-docker network create my_app_net
-docker network ls
-
-docker network create --help
-docker container run -d --name new_nginx --network my_app_net nginx
-
-docker network inspect my_app_net
-docker network --help
-docker network connect
-docker container inspect TAB COMPLETION
-docker container disconnect TAB COMPLETION
-docker container inspect
 ```
