@@ -21,7 +21,7 @@ docker network ls
 
 # Assign Virtual network to container
 docker network create --help
-docker container run -d --name new_nginx --network my_app_net nginx
+docker container run -d --name new_nginx --network my_app_net nginx:alpine
 
 # Network information
 docker network inspect my_app_net
@@ -35,16 +35,21 @@ docker container inspect
 
 ## Docker Networks: DNS and How Containers Find Each Other
 
+Delete all containers and networks !!
 ```
 docker container ls
 docker network ls
 docker network inspect <id/name>
 
-docker container run -d --name my_nginx --network my_app_net nginx
-docker container inspect my_nginx
+docker network create my_app_net
 
-docker container exec -it my_nginx ping new_nginx
-docker container exec -it new_nginx ping my_nginx
+docker container run -d --name web_01 --network my_app_net nginx:alpine
+docker container run -d --name web_02 --network my_app_net nginx:alpine
+docker container inspect web_01
+docker container inspect web_02
+
+docker container exec -it web_01 ping web_02
+docker container exec -it web_02 ping web_01
 docker network ls
 
 ```
