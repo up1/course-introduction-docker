@@ -108,7 +108,7 @@ docker container exec -it mysql bash
 
 docker container ls
 
-docker pull alpine
+docker image pull alpine
 docker image ls
 docker container run -it alpine bash
 docker container run -it alpine sh
