@@ -39,7 +39,7 @@ docker container prune
 * **ENTRYPOINT** ["executable", "param1", "param2"] เป็นคำสั่งที่จะทำงานเมื่อ image ถูก run เป็น container
 * **WORKDIR** /path/to/workdir เป็นการระบุ directory เริ่มต้นในการทำงาน RUN, CMD, ENTRYPOINT, COPY ถ้า path ของ WORKDIR ไม่มีอยู่ก่อนจะถูกสร้างขึ้นเอง
 
-## [Best practices]https://docs.docker.com/develop/develop-images/dockerfile_best-practices/()
+## [Best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 * ทำให้เรียบง่าย ไม่ซับซ้อน
 * 1 service 1 container
 * เลือก image เริ่มต้นจากเจ้าของ image ที่เป็นทางการ
