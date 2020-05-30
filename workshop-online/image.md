@@ -54,7 +54,16 @@ docker container prune
 * ระบุ WORKDIR ทุกครั้งก่อน RUN, ENTRYPOINT, CMD, COPY
 * https://www.fromlatest.io/ เครื่องมือตรวจสอบ Dockerfile
 
-## Workshop
+## Workshop with [NGINX](https://hub.docker.com/_/nginx)
+* Workshop 01 :: Introduction to Dockerfile
+* Workshop 02 :: Extend or change from base image
+* Workshop 03 :: Working with CMD
+* Workshop 04 :: Working with ENTRYPOINT and CMD
+* Workshop 05 :: Bad Dockerfile
+* Workshop 06 :: Good Dockerfile
+
+Build Docker image from Dockerfile
 ```
+docker image build -t <image name>:<tag> .
 
 ```
