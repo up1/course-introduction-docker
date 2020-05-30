@@ -21,12 +21,12 @@
 * Deploy applications with Docker
 * Network of Docker containers
 * Manage Data persistence with Volumes
-* How to use Docker with Continuous Integration and Delivery process ?
 * Docker compose
 * Introduction to Docker Swarm
 * Monitoring 
+* How to use Docker with Continuous Integration and Delivery process ?
 
-## Online Workshop and Quiz
+## [Online Workshop](https://github.com/up1/course-introduction-docker/tree/master/workshop-online)
 * Container
 * Image
 * Network
