@@ -50,16 +50,24 @@ docker plugin install --grant-all-permissions vieux/sshfs
 
 # Creat volume
 docker volume create --driver vieux/sshfs \
-  -o sshcmd=<ssh user>@<ssh ip/name>:/home/test \
+  -o sshcmd=<ssh user>@<ssh ip/name>:/home/demo \
   -o password=<ssh password> \
   sshvolume
 
 # Create container
 docker run -d \
   --name sshfs-container \
-  --volume-driver vieux/sshfs \
-  --mount src=sshvolume,target=/app,volume-opt=sshcmd=<ssh user>@<ssh ip/name>:/home/test,volume-opt=password=<ssh password> \
+  --mount type=volume,volume-driver=vieux/sshfs,src=sshvolume,target=/app \
   nginx:latest
+
+docker container exec -it sshfs-container sh
+#cd /app
+#ls 
+
+
+docker container stop sshfs-container
+docker container rm sshfs-container
+docker volume prune
 
 ```
 
@@ -79,9 +87,4 @@ docker container rm demo02
 ```
 docker run -d -it --name demo01 --mount type=tmpfs,destination=/app,tmpfs-mode=1770 nginx
 
-```
-
-## Workshop :: Manage data in Docker container
-
-```
 ```
