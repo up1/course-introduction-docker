@@ -39,6 +39,22 @@ docker container prune
 * **ENTRYPOINT** ["executable", "param1", "param2"] เป็นคำสั่งที่จะทำงานเมื่อ image ถูก run เป็น container
 * **WORKDIR** /path/to/workdir เป็นการระบุ directory เริ่มต้นในการทำงาน RUN, CMD, ENTRYPOINT, COPY ถ้า path ของ WORKDIR ไม่มีอยู่ก่อนจะถูกสร้างขึ้นเอง
 
+## Best practices
+* ทำให้เรียบง่าย ไม่ซับซ้อน
+* 1 service 1 container
+* เลือก image เริ่มต้นจากเจ้าของ image ที่เป็นทางการ
+* build image ให้มีขนาดเล็กที่สุด
+* directory ที่ใช้ build ให้แยกกันใช้เฉพาะงาน
+* ใช้เฉพาะ file ที่จำเป็น
+* ติดตั้ง component/library เท่าที่จำเป็นต้องใช้
+* RUN ควรรวบทุกคำสั่งที่ติดตั้ง software มาทำครั้งเดียว
+* ลบ temp file ที่เกิดจากการติดตั้ง software
+* จัดเรียงคำสั่งให้อ่านง่าย ใช้ \ ในการขึ้นบรรทัดใหม่เพื่อให้ยังเป็นชุดคำสั่งเดิม
+* ระบุ EXPOSE port ทุกครั้ง
+* ระบุ WORKDIR ทุกครั้งก่อน RUN, ENTRYPOINT, CMD, COPY
+* https://www.fromlatest.io/ เครื่องมือตรวจสอบ Dockerfile
+
+## Workshop
 ```
 
 ```
