@@ -14,4 +14,12 @@ docker container rm demo
 
 ## Angular 9 applicaction
 ```
+cd angular/demo-app
+docker image build -t angular-web:1.0 .
+
+docker container run -d --name demo -p 80:80 angular-web:1.0
+curl localhost
+
+docker container stop demo
+docker container rm demo
 ```
