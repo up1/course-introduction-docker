@@ -43,6 +43,7 @@
   * Single app
   * Multiple apps
   * Workshop
+  * [Start Order](https://docs.docker.com/compose/startup-order/)
 * [Docker swarm](https://github.com/up1/course-introduction-docker/blob/master/workshop/swarm/instruction.txt)
 * [Monitoring](https://github.com/up1/course-introduction-docker/blob/master/workshop/monitoring/instruction.md)
 
