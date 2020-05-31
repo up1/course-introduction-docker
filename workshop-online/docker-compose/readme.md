@@ -80,3 +80,15 @@ Clear
 docker-compose down
 docker-compose -f docker-compose-with-env.yml down
 ```
+
+## Start with Order
+```
+docker-compose -f docker-compose-waiting.yml build
+docker-compose -f docker-compose-waiting.yml up -d
+docker-compose -f docker-compose-waiting.yml ps
+docker-compose -f docker-compose-waiting.yml log
+
+curl http://localhost:3000/test?table=users
+
+docker-compose -f docker-compose-waiting.yml down
+```
