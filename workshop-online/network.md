@@ -33,6 +33,16 @@ docker container disconnect TAB COMPLETION
 docker container inspect
 ```
 
+## Isolated network of container
+```
+docker network create my_bridge
+docker container run -d --name db --net=my_bridge mysql:5.7.25
+docker container run -d --name web nginx:alpine
+
+// Add container=web to network=my_bridge
+docker network connect my_bridge web
+```
+
 ## Docker Networks: DNS and How Containers Find Each Other
 
 Delete all containers and networks !!
