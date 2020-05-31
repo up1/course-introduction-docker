@@ -27,10 +27,11 @@
 * How to use Docker with Continuous Integration and Delivery process ?
 
 ## [Online Workshop](https://github.com/up1/course-introduction-docker/tree/master/workshop-online)
-* Container
-* Image
-* Network
-* Volume
+* [Container](https://github.com/up1/course-introduction-docker/blob/master/workshop-online/container.md)
+* [Image](https://github.com/up1/course-introduction-docker/blob/master/workshop-online/image.md)
+* [Build image](https://github.com/up1/course-introduction-docker/blob/master/workshop-online/build-image/run.md)
+* [Network](https://github.com/up1/course-introduction-docker/blob/master/workshop-online/network.md)
+* [Storage and Volume](https://github.com/up1/course-introduction-docker/blob/master/workshop-online/storage.md)
 * Docker compose
 * Docker swarm
 
