@@ -79,7 +79,7 @@ docker container ls
 docker container rm -f <id/name>
 ```
 
-## Assignment :: Reeverse proxy
+## Assignment :: Reverse proxy
 
 ```
 # Create network
