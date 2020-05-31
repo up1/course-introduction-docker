@@ -34,6 +34,9 @@
    * NGINX as a Reverse server
    * Working with Dockerfile
    * working with Docker compose
+* [Multi-stage build](https://github.com/up1/course-introduction-docker/blob/master/workshop-online/multi-stage-build/run.md)
+   * Golang application
+   * Angular 9 application
 * [Network](https://github.com/up1/course-introduction-docker/blob/master/workshop-online/network.md)
 * [Storage and Volume](https://github.com/up1/course-introduction-docker/blob/master/workshop-online/storage.md)
 * Docker compose
