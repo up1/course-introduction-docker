@@ -1,0 +1,20 @@
+version: "3.8"
+
+services: 
+    api:
+        build: ./api
+        ports: 
+            - "3000:3000"
+    db:
+        build: ./db
+        environment:
+            MYSQL_DATABASE: 'your_database'
+            MYSQL_USER: 'example-user'
+            MYSQL_PASSWORD: 'example-password'
+            MYSQL_ROOT_PASSWORD: 'root'
+        volumes:
+            - mysql_volume:/var/lib/mysql
+        
+volumes:
+    mysql_volume:
+    
