@@ -1,5 +1,6 @@
 const http = require('http')
 const express = require('express')
+const os = require('os');
 const { createTerminus } = require('@godaddy/terminus')
 
 const app = express()
@@ -23,6 +24,7 @@ createTerminus(server, {
 server.listen(3000)
 
 app.get('/', (req, res) => {
-    var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-    res.send(`Hello World with ip=${ip}`)
+    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const hostname = os.hostname();
+    res.send(`Hello World in hostname=${hostname}`)
 })

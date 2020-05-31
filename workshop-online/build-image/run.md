@@ -41,5 +41,19 @@ docker network rm web_workshop
 
 ## Working with Docker compose
 ```
-TODO
+# Basic command
+docker-compose build
+docker-compose up
+docker-compose up -d
+docker-compose ps
+docker-compose logs --follow
+docker-compose top
+docker-compose down
+
+# Scaling by service
+docker-compose scale <service name>  = <number of containers>
+
+docker-compose up -d --scale mynodejs=3
+docker-compose ps
+curl http://localhost:8080/
 ```

@@ -1,0 +1,10 @@
+version: "3.8"
+
+services: 
+    mynodejs:
+        build: ./nodejs
+
+    nginx:
+        build: ./nginx
+        ports: 
+            - "8080:8080"
