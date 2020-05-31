@@ -39,7 +39,10 @@
    * Angular 9 application
 * [Network](https://github.com/up1/course-introduction-docker/blob/master/workshop-online/network.md)
 * [Storage and Volume](https://github.com/up1/course-introduction-docker/blob/master/workshop-online/storage.md)
-* Docker compose
+* [Docker compose](https://github.com/up1/course-introduction-docker/tree/master/workshop-online/docker-compose)
+  * Single app
+  * Multiple apps
+  * Workshop
 * Docker swarm
 
 
