@@ -5,6 +5,12 @@ services:
         build: ./api
         ports: 
             - "3000:3000"
+        environment:
+            MYSQL_DATABASE: 'your_database'
+            MYSQL_USER: 'example-user'
+            MYSQL_PASSWORD: 'example-password'
+            MYSQL_HOST: 'db'
+            PORT: '3000'
     db:
         build: ./db
         environment:

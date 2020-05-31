@@ -19,7 +19,7 @@
   * Database server with MySQL
     * Initial data in database
 
-Build Docker image of Database with MySQL
+Build and start with Docker compose
 ```
 cd 
 docker-compose build
@@ -70,7 +70,13 @@ Database changed
 7 rows in set (0.00 sec)
 ```
 
-Build Docker image of API with Node.jS
+Testing application
+```
+curl http://localhost:3000/test?table=users
 ```
 
+Clear
+```
+docker-compose down
+docker-compose -f docker-compose-with-env.yml down
 ```
