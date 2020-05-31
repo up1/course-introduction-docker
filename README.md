@@ -44,6 +44,7 @@
   * Multiple apps
   * Workshop
 * [Docker swarm](https://github.com/up1/course-introduction-docker/blob/master/workshop/swarm/instruction.txt)
+* [Monitoring](https://github.com/up1/course-introduction-docker/blob/master/workshop/monitoring/instruction.md)
 
 
 ## Workshops and Examples
