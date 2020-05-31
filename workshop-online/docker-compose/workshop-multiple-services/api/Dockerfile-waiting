@@ -1,0 +1,7 @@
+FROM node:14.3.0-stretch
+RUN apt-get -q update && apt-get -qy install netcat
+WORKDIR /app
+COPY package.json .
+RUN npm install
+COPY . .
+# CMD ["node", "index.js"]

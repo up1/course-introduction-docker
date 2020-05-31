@@ -10,8 +10,12 @@ const pool = mysql.createPool({
   database: process.env.MYSQL_DATABASE,
 });
 
-app.listen(process.env.PORT, () => {
-  console.log(`App server now listening on port ${process.env.PORT}`);
+app.listen(process.env.API_PORT, () => {
+  console.log(`App server now listening on port ${process.env.API_PORT}`);
+  pool.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
+    if (error) throw error;
+    console.log('The solution is: ', results[0].solution);
+  });
 });
 
 app.get('/test', (req, res) => {
