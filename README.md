@@ -43,7 +43,7 @@
   * Single app
   * Multiple apps
   * Workshop
-* Docker swarm
+* [Docker swarm](https://github.com/up1/course-introduction-docker/blob/master/workshop/swarm/instruction.txt)
 
 
 ## Workshops and Examples
