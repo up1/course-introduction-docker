@@ -1,0 +1,27 @@
+version: "3.8"
+
+services: 
+    api:
+        build: ./php
+        # volumes:
+        #     - ./php/www:/var/www/html      
+        ports: 
+            - "8080:80"
+        environment:
+            MYSQL_DATABASE: 'your_database'
+            MYSQL_USER: 'example-user'
+            MYSQL_PASSWORD: 'example-password'
+            MYSQL_HOST: 'db'
+    db:
+        build: ./mysql
+        environment:
+            MYSQL_DATABASE: 'your_database'
+            MYSQL_USER: 'example-user'
+            MYSQL_PASSWORD: 'example-password'
+            MYSQL_ROOT_PASSWORD: 'root'
+        volumes:
+            - mysql_volume:/var/lib/mysql
+        
+volumes:
+    mysql_volume:
+    
