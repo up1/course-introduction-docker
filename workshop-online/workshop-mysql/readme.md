@@ -1,6 +1,8 @@
 # Workshop of MySQL database
 
-## Soluttion 1 :: Using Docker command
+## Soluttion 1 :: Using [Docker command](https://docs.docker.com/engine/reference/commandline/run/)
+* Using env-file
+* Using mount files/folder
 ```
 docker container run -d --name db \
   -v $(pwd)/mysql/initial/:/docker-entrypoint-initdb.d/ \
