@@ -19,6 +19,8 @@ cd ..
 docker network create demo-php
 docker container run -d --name db --network demo-php --env-file config.db.env db:1.0
 docker container run -d --name web --network demo-php --env-file config.web.env -p 8080:80 web:1.0
+
+curl localhost:8080
 ```
 
 Delete all containers
