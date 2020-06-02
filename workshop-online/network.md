@@ -110,3 +110,12 @@ curl localhost:8080
 curl localhost:8080
 curl localhost:8080
 ```
+
+## Working with Docker compose
+```
+docker-compose build
+docker-compose  up -d --scale web=3
+docker-compose ps
+curl localhost:8080
+docker-compose down
+```
