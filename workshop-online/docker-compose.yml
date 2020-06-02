@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  web:
+    image: somkiat/hello
+  reverse-proxy:
+    image: somkiat/reverse-proxy
+    ports: 
+      - "8080:8080"
