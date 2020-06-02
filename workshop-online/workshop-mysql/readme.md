@@ -1,5 +1,12 @@
 # Workshop of MySQL database
 
+## Play with Docker (PWD)
+```
+git clone https://github.com/up1/course-introduction-docker.git
+cd course-introduction-docker
+cd workshop-online/workshop-mysql
+```
+
 ## Create container with Environment variables
 ```
 docker image pull mysql:8.0.20
