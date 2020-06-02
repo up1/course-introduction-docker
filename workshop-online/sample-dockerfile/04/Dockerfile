@@ -1,7 +1,7 @@
-FROM alpine
+FROM nginx:1.18.0
 
 # the executable
-ENTRYPOINT ["sleep"]
+ENTRYPOINT ["curl"]
 
 # the default arguments
-CMD ["10000"]
+CMD ["http://www.google.com"]
