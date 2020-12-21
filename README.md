@@ -21,7 +21,7 @@
 * Deploy applications with Docker
 * Network of Docker containers
 * Manage Data persistence with Volumes
-* Docker compose
+* [Docker compose](https://github.com/up1/course-introduction-docker/tree/master/workshop-online/docker-compose)
 * Introduction to Docker Swarm
 * [Monitoring](https://github.com/up1/course-introduction-docker/blob/master/workshop/monitoring/instruction.md)
 * How to use Docker with Continuous Integration and Delivery process ?
