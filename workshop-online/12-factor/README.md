@@ -1,5 +1,6 @@
 # [12 factor](https://12factor.net/) with Python app
-
+* Python 3 + Flask
+* MySQL
 
 ## 1. Codebase
 
