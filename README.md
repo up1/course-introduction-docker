@@ -22,7 +22,7 @@
 * Network of Docker containers
 * Manage Data persistence with Volumes
 * [Docker compose](https://github.com/up1/course-introduction-docker/tree/master/workshop-online/docker-compose)
-* Introduction to Docker Swarm
+* [Introduction to Docker Swarm](https://github.com/up1/course-introduction-docker/blob/master/workshop/swarm/instruction.txt)
 * [Monitoring](https://github.com/up1/course-introduction-docker/blob/master/workshop/monitoring/instruction.md)
 * How to use Docker with Continuous Integration and Delivery process ?
 * [12 factors with Docker](https://github.com/up1/course-introduction-docker/tree/master/workshop-online/12-factor)
