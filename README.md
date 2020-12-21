@@ -1,7 +1,7 @@
 # Course outline of Introduction to Docker
 
 ## Slide
-* [Introduction to Docker version 3](https://github.com/up1/course-introduction-docker/blob/master/slide/v3-update/SCK-INTRODUCTION-DOCKER-V3.pdf)
+* [Introduction to Docker 2020](https://github.com/up1/course-introduction-docker/blob/master/slide/SCK-INTRODUCTION-DOCKER-V6.pdf)
 
 ## Day 1
 * What is Container ?
