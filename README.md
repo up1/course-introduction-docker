@@ -25,6 +25,7 @@
 * Introduction to Docker Swarm
 * Monitoring 
 * How to use Docker with Continuous Integration and Delivery process ?
+* 12 factors with Docker
 
 ## [Online Workshop](https://github.com/up1/course-introduction-docker/tree/master/workshop-online)
 * [Container](https://github.com/up1/course-introduction-docker/blob/master/workshop-online/container.md)
@@ -62,7 +63,3 @@
 
 ## Resources
 * [Reference resources](https://github.com/up1/course-introduction-docker/wiki)
-
-
-
-
