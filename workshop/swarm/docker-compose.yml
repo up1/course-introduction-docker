@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   web:
@@ -8,7 +8,3 @@ services:
     deploy:
       mode: replicated
       replicas: 5
-      placement:
-        constraints:
-          - node.role == worker
-          - node.hostname == node2
