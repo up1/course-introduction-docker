@@ -148,6 +148,19 @@ $docker-compose up -d
 
 ## 6. Processes
 
+Application is executed as one or more stateless processes which share nothing and are horizontally partitionable.
+
+Each process must be stateless and must not have local storage (sessions, ...).
+
+This is required
+
+- for scalability
+- fault tolerance (crashes, ...)
+
+The data that need to be persisted, must be saved in a stateful resources (Database, shared filesystem, ...)
+
+Example :: keep session data into in-memory database such as [Redis](https://redis.io/)
+
 ## 7. Port binding
 
 ## 8. Concurrency
