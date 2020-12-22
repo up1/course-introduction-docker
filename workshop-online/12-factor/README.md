@@ -70,7 +70,7 @@ Access api with url=`http://localhost:5000/users`
 
 Configuration (credentials, database connection string, ...) should be stored in the environment.
 
-Edit file `api/app.py`
+Use file `api/app-config.py`
 
 ```
 import os
@@ -108,12 +108,23 @@ $docker container run \
 Run application with Docker compose
 
 ```
-
+$docker-compose build
+$docker-compose up -d
 ```
 
 ## 4. Backing services
 
 Application must make no distinction between a service running locally or as a third-party. (without any code changes)
+
+Example : change mysql to postgresql or to Cloud database
+
+```
+$export DATABASE_URL=mysql://testdb:t123@localhost/testdb
+
+to
+
+$export DATABASE_URL=postgresql://testdb:t123@localhost/testdb
+```
 
 ## 5. Build, release, run
 
