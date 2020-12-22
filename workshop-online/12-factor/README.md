@@ -57,16 +57,20 @@ Step to run
 $docker-compose build
 $docker-compose up -d
 $docker-compose ps
-     Name            Command      State           Ports
-----------------------------------------------------------------
-12-factor_api_1   python app.py   Up      0.0.0.0:5000->5000/tcp
+     Name                   Command             State           Ports
+------------------------------------------------------------------------------
+12-factor_api_1   python app.py                 Up      0.0.0.0:5000->5000/tcp
+12-factor_db_1    docker-entrypoint.sh mysqld   Up      3306/tcp, 33060/tc
 
-$docker-compose down
 ```
+
+Access api with url=`http://localhost:5000/users`
 
 ## 3. Config
 
 Configuration (credentials, database connection string, ...) should be stored in the environment.
+
+Edit file `api/app.py`
 
 ```
 import os

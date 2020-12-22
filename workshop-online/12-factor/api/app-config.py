@@ -1,6 +1,14 @@
 from flask import Flask
 import mysql.connector as db
 import json
+import os
+
+DATABASE_CREDENTIALS = {
+    'host': os.environ['DATABASE_HOST'],
+    'user': os.environ['DATABASE_USER'],
+    'password': os.environ['DATABASE_PASSWORD'],
+    'database': os.environ['DATABASE_NAME']
+}
 
 app = Flask(__name__)
 
@@ -8,8 +16,7 @@ app = Flask(__name__)
 def execute(query):
     con = None
     try:
-        con = db.connect(host='db', user='testdb',
-                         password='t123', database='testdb')
+        con = db.connect(**DATABASE_CREDENTIALS)
         cur = con.cursor()
         cur.execute(query)
         return cur.fetchall()
