@@ -128,6 +128,24 @@ $export DATABASE_URL=postgresql://testdb:t123@localhost/testdb
 
 ## 5. Build, release, run
 
+Build / Release and Run phases must be kept separated
+
+#### Working with docker command
+
+Building Docker image from Dockerfile
+
+```
+$docker image build -t demo:0.1 .
+$docker container run -d demo:0.1
+```
+
+#### Working with docker compose
+
+```
+$docker-compose build
+$docker-compose up -d
+```
+
 ## 6. Processes
 
 ## 7. Port binding
