@@ -114,7 +114,7 @@ $docker-compose up -d
 
 ## 4. Backing services
 
-Application must make no distinction between a service running locally or as a third-party. (without any code changes)
+Application must make no distinction between a service running locally or as a third-party library. (without any code changes)
 
 Example : change mysql to postgresql or to Cloud database
 
