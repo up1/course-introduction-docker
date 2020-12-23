@@ -210,7 +210,7 @@ signal.signal(signal.SIGTERM, lambda *args: server.stop(timeout=60))
 
 A 12-factor app is designed to keep the gap between development and production small.
 
-## 11. Logs
+## 11. Logs with [Docker](https://docs.docker.com/config/containers/logging/)
 
 Consider logs as a stream of time-ordered events collected from all running processes and backing services.
 
@@ -300,6 +300,16 @@ $docker-compose -f docker-compose-logging.yml ps
 ```
 
 Access to url=`localhost` and see result in Kibana `localhost:5601`
+
+or
+
+Access to url=`http://localhost:9200/_cat/indices`
+
+```
+yellow open fluentd-20201223                fjiJZuuTT6myqAtenc7V2w 1 1 10  0  30.7kb  30.7kb
+```
+
+And url=`http://localhost:9200/fluentd*/_search`
 
 ## 12. Admin processes
 
