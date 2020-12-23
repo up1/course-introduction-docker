@@ -297,6 +297,9 @@ $docker-compose -f docker-compose-logging.yml up -d kibana
 $docker-compose -f docker-compose-logging.yml up -d fluentd
 $docker-compose -f docker-compose-logging.yml up -d web
 $docker-compose -f docker-compose-logging.yml ps
+
+$docker-compose -f docker-compose-logging.yml logs --follow
+
 ```
 
 Access to url=`localhost` and see result in Kibana `localhost:5601`
