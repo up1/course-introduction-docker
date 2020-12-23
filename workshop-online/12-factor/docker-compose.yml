@@ -4,7 +4,7 @@ services:
     build: ./api
     image: api:0.1
     ports:
-      - 5000:5000
+      - 5000:5000 # service is exposed on the port 5000 of the host
   db:
     image: mysql:8
     environment:

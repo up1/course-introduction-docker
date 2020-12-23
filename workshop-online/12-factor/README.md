@@ -163,12 +163,152 @@ Example :: keep session data into in-memory database such as [Redis](https://red
 
 ## 7. Port binding
 
+Application must be self-contained and bind to a port specified as an environment variable.
+
+It can’t rely on the injection of a web container such as tomcat or unicorn; instead it must embed a server such as jetty or thin.
+
+For example
+
+```
+port = int(os.environ.get("PORT", 5000))
+app.run(host='0.0.0.0', port=port)
+```
+
 ## 8. Concurrency
+
+Horizontal scalability with the processes model.
+
+The app can be seen as a set of processes of different types
+
+- web server
+- worker
+- cron
+
+Each process needs to be able to scale horizontally, it can have its own internal multiplexing.
 
 ## 9. Disposability
 
+Each process of an application must be disposable.
+
+- it must have a quick startup
+  - ease the horizontal scalability
+- it must ensure a clean shutdown
+  - stop listening on the port
+  - finish to handle the current request
+  - usage of a queueing system for long lasting (worker type) process
+
+Application’s processes can be started or stopped (with a SIGTERM) anytime. Thus, minimizing startup time and gracefully shutting down is very important.
+
+Example for delay with timeout
+
+```
+import signal
+signal.signal(signal.SIGTERM, lambda *args: server.stop(timeout=60))
+```
+
 ## 10. Dev/prod parity
+
+A 12-factor app is designed to keep the gap between development and production small.
 
 ## 11. Logs
 
+Consider logs as a stream of time-ordered events collected from all running processes and backing services.
+
+it just writes its output to its `stdout` or `stderr` stream.
+
+The execution environment is responsible for collecting, collating, and routing this output to its final destination(s).
+
+A lot of services offer a centralized log management ([Elastic Stack / ELK](https://www.elastic.co/products) , [Splunk](http://splunk.com), [Logentries](https://logentries.com), ...), and most of them are very easily integrated with Docker.
+
+#### Example :: [Docker with Fluentd](https://docs.fluentd.org/container-deployment/docker-logging-driver)
+
+Step 1 :: Config fluentd in file `demo.conf`
+
+```
+<source>
+  @type forward
+  port 24224
+  bind 0.0.0.0
+</source>
+
+<match *>
+  @type stdout
+</match>
+```
+
+Start Fluentd
+
+```
+$docker container run -it -p 24224:24224 \
+  -v $(pwd)/fluentd/demo.conf:/fluentd/etc/demo.conf \
+  -e FLUENTD_CONF=demo.conf fluent/fluentd:latest
+```
+
+Step 2 :: Start Docker Container with Fluentd Driver
+
+```
+$docker container run --log-driver=fluentd --log-opt tag="docker.{.ID}}" ubuntu echo 'Hello Fluentd!'
+```
+
+#### [Working with Docker compose (Fluentd + ELK stack)](https://docs.fluentd.org/container-deployment/docker-compose)
+
+File `docker-compose-logging.yml`
+
+```
+version: '3'
+services:
+  web:
+    image: httpd
+    ports:
+      - "80:80"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: httpd.access
+
+  fluentd:
+    build: ./fluentd
+    volumes:
+      - ./fluentd/fluentd.conf:/fluentd/etc/fluentd.conf
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.0
+    environment:
+      - "discovery.type=single-node"
+    ports:
+      - "9200:9200"
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.10.0
+    ports:
+      - "5601:5601"
+```
+
+Step to run
+
+```
+$docker-compose -f docker-compose-logging.yml build
+$docker-compose -f docker-compose-logging.yml up -d elasticsearch
+$docker-compose -f docker-compose-logging.yml up -d kibana
+$docker-compose -f docker-compose-logging.yml up -d fluentd
+$docker-compose -f docker-compose-logging.yml up -d web
+$docker-compose -f docker-compose-logging.yml ps
+```
+
+Access to url=`localhost` and see result in Kibana `localhost:5601`
+
 ## 12. Admin processes
+
+Admin process should be seen as a one-off process (opposed to long running processes that make up an application).
+
+Usually used for maintenance task, though a REPL, admin process must be executed on the same release (codebase + configuration) than the application.
+
+Example
+
+```
+$docker container run -i -t --entrypoint python demo:0.1 /src/some-task.py
+```
