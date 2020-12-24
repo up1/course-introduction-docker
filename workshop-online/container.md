@@ -11,14 +11,14 @@ docker run
 
 ## Starting a Nginx Web Server
 ```
-docker container run --publish 80:80 nginx
-docker container run --publish 80:80 --detach nginx
+docker container run --publish 8888:80 nginx
+docker container run --publish 8888:80 --detach nginx
 docker container ls
 docker container stop 690
 docker container ls
 docker container ls -a
 
-docker container run --publish 80:80 --detach --name webhost nginx
+docker container run --publish 8888:80 --detach --name webhost nginx
 docker container ls -a
 docker container logs webhost
 docker container top
