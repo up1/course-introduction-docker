@@ -35,6 +35,12 @@ docker container rm -f 63f
 docker container ls -a
 ```
 
+Save container to image
+```
+docker container commit webhost demo:1.0
+```
+
+
 ## Container VS. VM
 
 ```
