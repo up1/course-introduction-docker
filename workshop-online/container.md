@@ -38,6 +38,7 @@ docker container ls -a
 Save container to image
 ```
 docker container commit webhost demo:1.0
+docker image ls
 ```
 
 
