@@ -50,6 +50,7 @@
 
 
 ## Workshops and Examples
+* [Component testing with Go](https://github.com/up1/workshop-microservices-golang-2021/tree/main/testing/component-testing)
 * [NodeJS and MySQL](https://github.com/up1/demo-docker-nodejs-mysql)
 * [Java and MySQL](https://github.com/up1/docker-workshop-java-mysql)
 * [Hello Spring Boot](https://github.com/up1/springboot-hello)
