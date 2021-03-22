@@ -1,4 +1,4 @@
-# Course outline of Introduction to Docker
+# Introduction to Docker (From Develop to Deploy)
 
 ## Slide
 * [Introduction to Docker 2020](https://github.com/up1/course-introduction-docker/blob/master/slide/SCK-INTRODUCTION-DOCKER-V6.pdf)
