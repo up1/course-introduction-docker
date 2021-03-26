@@ -51,6 +51,7 @@
 
 
 ## Workshops and Examples
+* [Multi-statge build with Go](https://github.com/up1/workshop-docker-multi-stage)
 * [Component testing with Go](https://github.com/up1/workshop-microservices-golang-2021/tree/main/testing/component-testing)
 * [NodeJS and MySQL](https://github.com/up1/demo-docker-nodejs-mysql)
 * [NodeJS + sequelize and PostgreSQL](https://github.com/up1/workshop-nodejs-postgresql)
