@@ -26,6 +26,7 @@
 * [Monitoring](https://github.com/up1/course-introduction-docker/blob/master/workshop/monitoring/instruction.md)
 * How to use Docker with Continuous Integration and Delivery process ?
 * [12 factors with Docker](https://github.com/up1/course-introduction-docker/tree/master/workshop-online/12-factor)
+* CI/CD with Docker
 
 ## [Online Workshop](https://github.com/up1/course-introduction-docker/tree/master/workshop-online)
 * [Container](https://github.com/up1/course-introduction-docker/blob/master/workshop-online/container.md)
@@ -50,8 +51,10 @@
 
 
 ## Workshops and Examples
+* [Multi-stage build with Go](https://github.com/up1/workshop-docker-multi-stage)
 * [Component testing with Go](https://github.com/up1/workshop-microservices-golang-2021/tree/main/testing/component-testing)
 * [NodeJS and MySQL](https://github.com/up1/demo-docker-nodejs-mysql)
+* [NodeJS + sequelize and PostgreSQL](https://github.com/up1/workshop-nodejs-postgresql)
 * [Java and MySQL](https://github.com/up1/docker-workshop-java-mysql)
 * [Hello Spring Boot](https://github.com/up1/springboot-hello)
 * [Spring Boot](https://github.com/up1/demo-springboot-tn)
