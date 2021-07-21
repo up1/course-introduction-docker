@@ -56,6 +56,7 @@
 * [NodeJS and MySQL](https://github.com/up1/demo-docker-nodejs-mysql)
 * [NodeJS + sequelize and PostgreSQL](https://github.com/up1/workshop-nodejs-postgresql)
 * [Java and MySQL](https://github.com/up1/docker-workshop-java-mysql)
+* [Java TDD + Web + MySQL](https://github.com/up1/workshop-java-web-tdd)
 * [Hello Spring Boot](https://github.com/up1/springboot-hello)
 * [Spring Boot](https://github.com/up1/demo-springboot-tn)
 * [ReactJS](https://github.com/up1/demo-docker-reactjs)
