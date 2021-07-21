@@ -45,6 +45,9 @@ docker image ls
 
 Fixed problem with 403 Forbidden
 ```
+mkdir demo
+cd demo
+echo "Test" > index.html
 docker container run -d -p 8882:80 -v $(pwd):/usr/share/nginx/html -u 0:0  nginx:1.21.1
 ```
 
