@@ -41,6 +41,14 @@ docker container commit webhost demo:1.0
 docker image ls
 ```
 
+## Create container in Play With Docker
+
+Fixed problem with 403 Forbidden
+```
+docker container run -d -p 8882:80 -v $(pwd):/usr/share/nginx/html -u 0:0  nginx:1.21.1
+```
+
+
 
 ## Container VS. VM
 
