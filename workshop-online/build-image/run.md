@@ -3,6 +3,9 @@
 ## Build image of Node.JS
 
 ```
+git clone https://github.com/up1/course-introduction-docker.git
+cd course-introduction-docker
+cd workshop-online/build-image
 cd nodejs
 docker image build -t demo-node:1.0 .
 docker image ls
