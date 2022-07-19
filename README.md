@@ -51,6 +51,7 @@
 
 
 ## Workshops and Examples
+* [Docker compose :: Go + PostgreSQL + Waiting](https://github.com/up1/demo-go-postgres-docker-compose)
 * [Multi-stage build with Go](https://github.com/up1/workshop-docker-multi-stage)
 * [Component testing with Go](https://github.com/up1/workshop-microservices-golang-2021/tree/main/testing/component-testing)
 * [CI/CD with Go](https://github.com/up1/workshop-devops-go)
