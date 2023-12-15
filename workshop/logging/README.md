@@ -7,5 +7,5 @@ $docker container run --rm --name fluentdserver -it -p 24224:24224 -v $(pwd)/doc
 
 ### Step 2 :: Start docker container with Fluentd driver
 ```
-$docker container run --rm --log-driver=fluentd  --log-opt tag="{{.ImageName}}/{{.Name}}/{{.ID}}" alpine echo 'Hello Fluentd!'
+$docker container run --rm --log-driver=fluentd  --log-opt tag="{{.ImageName}}/{{.Name}}/{{.ID}}" -it alpine sh
 ```
