@@ -2,7 +2,7 @@
 
 ### Step 1 :: Start Fluentd
 ```
-$docker container run --rm --name fluentdserver -it -p 24224:24224 -v $(pwd)/docker.conf:/fluentd/etc/docker.conf -e FLUENTD_CONF=docker.conf fluent/fluentd:latest
+$docker container run --rm --name fluentdserver -it -p 24224:24224 -v $(pwd)/docker.conf:/fluentd/etc/docker.conf -e FLUENTD_CONF=docker.conf fluentd
 ```
 
 ### Step 2 :: Start docker container with Fluentd driver
